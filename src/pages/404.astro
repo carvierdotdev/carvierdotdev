@@ -1,8 +1,8 @@
 ---
-import { Image } from 'astro:assets';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import BaseLayout from '../layouts/BaseLayout.astro';
 import NotFoundImage from '@src/assets/img/404-not-found.png';
+import { Image } from 'astro:assets';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title={'404 Page Not Found - ' + SITE_TITLE} description={SITE_DESCRIPTION + ' 404 Page Not Found'}>
@@ -10,6 +10,27 @@ import NotFoundImage from '@src/assets/img/404-not-found.png';
 		<Image width={300} class='my-8 mx-auto' src={NotFoundImage} alt='404 Page Not Found' />
 		<div class='p-4'>
 			<h1 class='text-5xl font-bold my-4'>Page Not Found</h1>
+			<!-- <p class='text-xl pb-24'>
+				<a href='/' class='underline'
+					>Go to HOME<span class='inline-block align-sub no-underline'
+						><svg
+							xmlns='http://www.w3.org/2000/svg'
+							width='20'
+							height='20'
+							viewBox='0 0 24 24'
+							fill='none'
+							stroke='currentColor'
+							stroke-width='1.7'
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							class='lucide lucide-house'
+							><path d='M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8'></path><path
+								d='M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'
+							></path></svg
+						></span
+					></a
+				>
+			</p> -->
 			<p class='text-xl'>
 				The page you're looking for is either moved or no longer exists. <br />
 				Please contact the site owner that linked you to the original URL and let them know their link is broken.
