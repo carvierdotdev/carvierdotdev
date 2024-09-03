@@ -3,10 +3,8 @@ import Ava from '@src/assets/img/ava.jpg';
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
-import PostItem from '../components/PostItem.astro';
-import ProjectList from '../components/ProjectList.astro';
 import Prose from '../components/Prose.astro';
-import { SITE_DESCRIPTION, SITE_TAGLINE, SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_TAGLINE, SITE_TITLE } from '../const';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { projects } from './projects/projects';
 
@@ -49,17 +47,17 @@ const posts = (await getCollection('blog'))
 					</div>
 				</Prose>
 			</div>
-			<Image src={Ava} alt='Carvier Dotdev' width={300} loading='eager' class='rounded-3xl rotate-3 mx-4 md:mx-0' />
+			<Image src={Ava} alt='Carvierdotdev' width={300} loading='eager' class='rounded-3xl rotate-3 mx-4 md:mx-0' />
 		</div>
 		<main>
 			<!-- PostsList -->
 			<div class='mt-6 mb-12'>
 				<div class='flex justify-between gap-2 border-b mb-1 dark:border-b-zinc-700'>
 					<h2 class='text-lg font-bold mb-3'>Recent Posts</h2>
-					<a href='/posts/' class='inline-block py-2 underline text-zinc-950 dark:text-fuchsia-100'>All posts &raquo;</a>
+					<!-- <a href='/posts/' class='inline-block py-2 underline text-zinc-950 dark:text-fuchsia-100'>All posts &raquo;</a> -->
 				</div>
 				<div>
-					{posts.map((post: BlogPost) => <PostItem post={post} />)}
+					<!-- {posts.map((post: BlogPost) => <PostItem post={post} />)} -->
 				</div>
 				<div class='text-right'></div>
 			</div>
@@ -67,9 +65,9 @@ const posts = (await getCollection('blog'))
 			<div>
 				<div class='flex justify-between gap-2 mb-1'>
 					<h2 class='text-lg font-bold mb-3'>My Projects</h2>
-					<a href='/projects/' class='inline-block py-2 underline text-zinc-950 dark:text-fuchsia-100'>All projects &raquo;</a>
+					<!-- <a href='/projects/' class='inline-block py-2 underline text-zinc-950 dark:text-fuchsia-100'>All projects &raquo;</a> -->
 				</div>
-				<ProjectList projects={top6Projects} />
+				<!-- <ProjectList projects={top6Projects} /> -->
 			</div>
 		</main>
 	</div>
